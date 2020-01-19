@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kuangyuanbin.cn/"/>
-  <updated>2020-01-18T09:20:40.187Z</updated>
+  <updated>2020-01-19T06:58:48.175Z</updated>
   <id>http://kuangyuanbin.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://kuangyuanbin.cn/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     <id>http://kuangyuanbin.cn/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
     <published>2020-01-17T12:03:08.000Z</published>
-    <updated>2020-01-18T09:20:40.187Z</updated>
+    <updated>2020-01-19T06:58:48.175Z</updated>
     
     <content type="html"><![CDATA[<p>在写文章时，常常有配图说明的需求，Hexo有多种图片插入方式，可以将图片存放在本地引用或者将图片放在CDN上引用，通过此文总接一下在Hexo搭建的博客中，插入图片的常用方式，也可以理解为在 Markdown 中插入图片。  </p><h4 id="src链接"><a href="#src链接" class="headerlink" title="src链接"></a>src链接</h4><p>如果你要插入的图片，是一个外部的 src 链接地址，比如该图片存放在 CDN 上，或某某图床上面，那就使用 Markdown 默认的插入图片的方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure><h4 id="本地绝对路径"><a href="#本地绝对路径" class="headerlink" title="本地绝对路径"></a>本地绝对路径</h4><p>当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/images 文件夹中，通过 Markdown 语法访问它们。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](&#x2F;images&#x2F;test.jpg)</span><br></pre></td></tr></table></figure><h4 id="本地相对路径"><a href="#本地相对路径" class="headerlink" title="本地相对路径"></a>本地相对路径</h4><p>图片除了可以放在统一的 images 文件夹中，还可以放在文章自己的目录中，文章的目录可以通过配置 _config.yml 来生成。配置如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure><p>将 _config.yml 文件中的配置项 post_asset_folder 设为 true 后，执行命令 $ hexo new post_name，在 source/_posts 中会生成文章 post_name.md 和同名文件夹 post_name 。将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](&#x2F;images&#x2F;test.jpg)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -78,7 +78,7 @@
     <link href="http://kuangyuanbin.cn/2020/01/14/hello-world/"/>
     <id>http://kuangyuanbin.cn/2020/01/14/hello-world/</id>
     <published>2020-01-14T10:36:22.208Z</published>
-    <updated>2020-01-16T10:03:58.994Z</updated>
+    <updated>2020-01-19T06:58:25.570Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
