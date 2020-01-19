@@ -5,9 +5,9 @@
   <subtitle>Ordinary life , Unwilling to be ordinary code farmers</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2020-01-17T12:13:36.136Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://kuangyuanbin.cn/"/>
+  <updated>2020-01-18T09:20:40.187Z</updated>
+  <id>http://kuangyuanbin.cn/</id>
   
   <author>
     <name>Simon</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>hexo插入图片</title>
-    <link href="http://yoursite.com/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
-    <id>http://yoursite.com/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
+    <link href="http://kuangyuanbin.cn/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
+    <id>http://kuangyuanbin.cn/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</id>
     <published>2020-01-17T12:03:08.000Z</published>
-    <updated>2020-01-17T12:13:36.136Z</updated>
+    <updated>2020-01-18T09:20:40.187Z</updated>
     
     <content type="html"><![CDATA[<p>在写文章时，常常有配图说明的需求，Hexo有多种图片插入方式，可以将图片存放在本地引用或者将图片放在CDN上引用，通过此文总接一下在Hexo搭建的博客中，插入图片的常用方式，也可以理解为在 Markdown 中插入图片。  </p><h4 id="src链接"><a href="#src链接" class="headerlink" title="src链接"></a>src链接</h4><p>如果你要插入的图片，是一个外部的 src 链接地址，比如该图片存放在 CDN 上，或某某图床上面，那就使用 Markdown 默认的插入图片的方式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure><h4 id="本地绝对路径"><a href="#本地绝对路径" class="headerlink" title="本地绝对路径"></a>本地绝对路径</h4><p>当 Hexo 项目中只用到少量图片时，可以将图片统一放在 source/images 文件夹中，通过 Markdown 语法访问它们。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](&#x2F;images&#x2F;test.jpg)</span><br></pre></td></tr></table></figure><h4 id="本地相对路径"><a href="#本地相对路径" class="headerlink" title="本地相对路径"></a>本地相对路径</h4><p>图片除了可以放在统一的 images 文件夹中，还可以放在文章自己的目录中，文章的目录可以通过配置 _config.yml 来生成。配置如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure><p>将 _config.yml 文件中的配置项 post_asset_folder 设为 true 后，执行命令 $ hexo new post_name，在 source/_posts 中会生成文章 post_name.md 和同名文件夹 post_name 。将图片资源放在 post_name 中，文章就可以使用相对路径引用图片资源了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![alt](&#x2F;images&#x2F;test.jpg)</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -36,19 +36,19 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://kuangyuanbin.cn/categories/Hexo/"/>
     
     
-      <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://kuangyuanbin.cn/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>hexo中的nexT主题菜单栏选项跳转时出现Cannot GET</title>
-    <link href="http://yoursite.com/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/"/>
-    <id>http://yoursite.com/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/</id>
+    <link href="http://kuangyuanbin.cn/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/"/>
+    <id>http://kuangyuanbin.cn/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/</id>
     <published>2020-01-16T12:24:08.000Z</published>
-    <updated>2020-01-17T12:01:08.301Z</updated>
+    <updated>2020-01-18T10:16:23.213Z</updated>
     
     <content type="html"><![CDATA[<h2 id="hexo中的nexT主题菜单栏选项跳转时出现Cannot-GET-tags-20"><a href="#hexo中的nexT主题菜单栏选项跳转时出现Cannot-GET-tags-20" class="headerlink" title="hexo中的nexT主题菜单栏选项跳转时出现Cannot GET /tags/%20/"></a>hexo中的nexT主题菜单栏选项跳转时出现Cannot GET /tags/%20/</h2><p>刚接触hexo博客nexT主题，默认只有首页和归档两个菜单项，为了让菜单栏显得不那么空旷，按照<strong><em><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93644533" target="_blank" rel="noopener">教程添加分类、标签、关于菜单项</a></em></strong><br>完全按照教程做完之后，点击首页、关于、标签等菜单项，无法跳转到自己想看的界面，会出现如下图显示的界面。<img src="2.png" alt="alt"><br>一开始看就感觉是路径问题，而20%是空格的编码。由于之前吃了很多次这种配置文件空格或者中英文标点的问题，就改了主题下的<code>_config.yml</code>配置文件，<strong>把<code>menu</code>中||前的空格去掉</strong>，保存后再次尝试发现果然好了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F;|| home</span><br><span class="line">  about: &#x2F;about&#x2F;|| user</span><br><span class="line">  tags: &#x2F;tags&#x2F;|| tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;|| th</span><br><span class="line">  archives: &#x2F;archives&#x2F;|| archive</span><br></pre></td></tr></table></figure><p>让人感觉奇怪的点在于这个空格是next主题文件配置里面自带的，所以一出问题总觉得是自己添加菜单项时出了问题，没想过改配置文件，浪费了大量的时间</p>]]></content>
     
@@ -62,21 +62,21 @@
     </summary>
     
     
-      <category term="Hexo" scheme="http://yoursite.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://kuangyuanbin.cn/categories/Hexo/"/>
     
-      <category term="nexT" scheme="http://yoursite.com/categories/Hexo/nexT/"/>
+      <category term="nexT" scheme="http://kuangyuanbin.cn/categories/Hexo/nexT/"/>
     
     
-      <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="http://kuangyuanbin.cn/tags/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="踩坑" scheme="http://yoursite.com/tags/%E8%B8%A9%E5%9D%91/"/>
+      <category term="踩坑" scheme="http://kuangyuanbin.cn/tags/%E8%B8%A9%E5%9D%91/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/01/14/hello-world/"/>
-    <id>http://yoursite.com/2020/01/14/hello-world/</id>
+    <link href="http://kuangyuanbin.cn/2020/01/14/hello-world/"/>
+    <id>http://kuangyuanbin.cn/2020/01/14/hello-world/</id>
     <published>2020-01-14T10:36:22.208Z</published>
     <updated>2020-01-16T10:03:58.994Z</updated>
     
