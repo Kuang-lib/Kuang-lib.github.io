@@ -1,6 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>JavaScript基础</title>
+    <url>/2020/02/17/JavaScript%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="标签种类"><a href="#标签种类" class="headerlink" title="标签种类"></a>标签种类</h2><p>标签可分为两种：</p>
+<ol>
+<li><strong>单标签</strong>：由一个标签组成。例如 <code>&lt;hr /&gt;</code></li>
+<li><strong>双标签</strong>：由“开始标签”和“结束标签”两部分构成。例如<code>&lt;p&gt;&lt;/p&gt;</code></li>
+</ol>
+<p>标签分为两种等级：</p>
+<ol>
+<li>　行内元素</li>
+<li>块级元素</li>
+</ol>
+<p>行内元素和块级元素的区别：</p>
+<p><strong>行内元素</strong>：　　</p>
+<ul>
+<li>与其他行内元素并排</li>
+<li>不能设置宽高，默认的宽度就是文字的宽度</li>
+</ul>
+<p><strong>块级元素</strong>：</p>
+<ul>
+<li><p>霸占一行，不能与其他任何元素并列。</p>
+</li>
+<li><p>能接受宽高，如果不设置宽度，那么宽度将默认变为父级的100%。</p>
+</li>
+</ul>
+<h2 id="样式类型"><a href="#样式类型" class="headerlink" title="样式类型"></a>样式类型</h2><p>css样式有以下三种类型：</p>
+<ol>
+<li><p>内联样式</p>
+<p>内联样式是直接在html标签上定义该标签的css样式.如<code>&lt;div style=&quot;&quot;&gt;&lt;/div&gt;</code></p>
+</li>
+<li><p>内部样式</p>
+<p>内部样式是写在html文件中，且包含在<code>&lt;style&gt;&lt;/style&gt;</code>代码块中</p>
+</li>
+<li><p>外部样式</p>
+<p>外部样式是通过在html中引用外部css文件来控制样式</p>
+<p>html文件中用<code>link</code>链入</p>
+</li>
+</ol>
+<h2 id="JavaScript数据类型及输出"><a href="#JavaScript数据类型及输出" class="headerlink" title="JavaScript数据类型及输出"></a>JavaScript数据类型及输出</h2><h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><ol>
+<li><p>声明变量,通过关键字var。例如：<code>var a = 5</code></p>
+</li>
+<li><p>同时声明多个变量,用逗号隔开。例如：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>  <span class="keyword">var</span> a,b,c;</span><br><span class="line"><span class="number">2</span>     a = <span class="number">10</span>;</span><br><span class="line"><span class="number">3</span>     b = <span class="number">20</span>;</span><br><span class="line"><span class="number">4</span>     c = <span class="number">30</span>;</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>变量名的命名规则</p>
+<p>（1） 不能以数字开头,可包含字母、数字、_、$<br>（2）不能使用关键字<br>（3） 严格区分大小写<br>（4） 命名建议：见名知意</p>
+</li>
+</ol>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><h4 id="1、基本数据类型"><a href="#1、基本数据类型" class="headerlink" title="1、基本数据类型"></a>1、基本数据类型</h4><p><strong>（1） 数字类型number</strong></p>
+<ol>
+<li>普通数字</li>
+<li>NaN：代表非数字</li>
+</ol>
+<ul>
+<li>与任何数进行运算都得到NaN</li>
+<li>不等于任何数，甚至不等于自己</li>
+<li>isNaN() 判断是不是非数字，如果是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果是其他值,则返回 false。</li>
+</ul>
+<p><strong>（2）字符串类型 string</strong></p>
+<ol>
+<li><p>有引号的值都是字符串类型</p>
+</li>
+<li><p>字符串内还有别的在引号（’’,””）</p>
+<ul>
+<li><p>将外层引号替换成另外一种</p>
+</li>
+<li><p>通过转义字符\</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>（3）布尔类型 boolean</strong></p>
+<p>​    只有两个值：true 、false</p>
+<h4 id="2、特殊数据类型"><a href="#2、特殊数据类型" class="headerlink" title="2、特殊数据类型"></a>2、特殊数据类型</h4><p>（1）null 空对象</p>
+<ul>
+<li>只有唯一的值null</li>
+<li>注意代码的执行顺序。</li>
+</ul>
+<p>（2）undefined 代表的是声明变量未赋值</p>
+<ul>
+<li>只有唯一的值undefined</li>
+<li>注意区分报错信息： ** is not defined。代表变量未声明。</li>
+</ul>
+<h4 id="3、-判断数据类型-typeof"><a href="#3、-判断数据类型-typeof" class="headerlink" title="3、 判断数据类型 typeof()"></a>3、 判断数据类型 typeof()</h4><h3 id="数据类型的转换"><a href="#数据类型的转换" class="headerlink" title="数据类型的转换"></a>数据类型的转换</h3><h4 id="1、直接转换"><a href="#1、直接转换" class="headerlink" title="1、直接转换"></a>1、直接转换</h4><p>（1）Number() 转换成数字类型</p>
+<ul>
+<li>字符串-&gt;数字： 空字符串转成数字为0.若可以转换成数字，返回值就是数字。若不能转成数字就是NaN。</li>
+<li>布尔值-&gt;数字： true-&gt;1,false-&gt;0</li>
+</ul>
+<p>（2）String() 转换成字符串类型</p>
+<ul>
+<li>直接加引号</li>
+</ul>
+<p>（3）Boolean() 转换成布尔类型</p>
+<ul>
+<li>除了0、NaN、””、null、undefined转成false，其他都转成true。</li>
+</ul>
+<h4 id="2、隐式转换"><a href="#2、隐式转换" class="headerlink" title="2、隐式转换"></a>2、隐式转换</h4><p>（1）若运算无法进行下去的时候，会尝试将数据类型进行隐式转换后，再运算。<br>（2）若隐式转换后依旧无法运算，会返回NaN</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><h4 id="1-alert（）"><a href="#1-alert（）" class="headerlink" title="1. alert（）"></a>1. alert（）</h4><p>(具体的值||变量(不要加引号)) 弹窗</p>
+<h4 id="2-document-write（）"><a href="#2-document-write（）" class="headerlink" title="2. document.write（）"></a>2. document.write（）</h4><p>(具体的值||变量(不加引号))<br>往body里面追加内容</p>
+<h4 id="3-console-log（）"><a href="#3-console-log（）" class="headerlink" title="3. console.log（）"></a>3. console.log（）</h4><p>(具体的值||变量(不要加引号))  打印到控制台console，一般用于代码调试</p>
+<h4 id="4-ID名称-innerHTML-“内容或标签”"><a href="#4-ID名称-innerHTML-“内容或标签”" class="headerlink" title="4. ID名称.innerHTML = “内容或标签”"></a>4. ID名称.innerHTML = “内容或标签”</h4><p>给**元素添加内容，内容可以包括标签。</p>
+<h2 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h2><h3 id="1、算术运算："><a href="#1、算术运算：" class="headerlink" title="1、算术运算： +  -  *  /  %"></a>1、算术运算： +  -  *  /  %</h3><ul>
+<li><p>+当运算式中有字符串时，做字符串的拼接</p>
+</li>
+<li><p>- / % 将纯数字的字符串转成数值进行运算</p>
+<p>例如：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="string">'10'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a+b); <span class="comment">//1010 String</span></span><br><span class="line"><span class="built_in">console</span>.log(a-b); <span class="comment">//0	 number</span></span><br><span class="line"><span class="built_in">console</span>.log(a*b); <span class="comment">//100	 number</span></span><br><span class="line"><span class="built_in">console</span>.log(a/b); <span class="comment">//1    number</span></span><br><span class="line"><span class="built_in">console</span>.log(a%b); <span class="comment">//0    number</span></span><br><span class="line"></span><br><span class="line">b = <span class="string">'10a'</span></span><br><span class="line"><span class="comment">//a-b的值NaN 类型number</span></span><br><span class="line"><span class="comment">//取出b中的10进行计算: parseInt()</span></span><br></pre></td></tr></table></figure></div>
+
+
+</li>
+</ul>
+<h3 id="2、常用的数学方法"><a href="#2、常用的数学方法" class="headerlink" title="2、常用的数学方法"></a>2、常用的数学方法</h3><p>（1）parseInt()       取整数<br>（2） parseFloat()     取浮点数<br>（3） Math.round()     四舍五入<br>（4） Math.random()   获取0-1的随机数，包含0，不包含1</p>
+]]></content>
+      <categories>
+        <category>H5</category>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>学习笔记</tag>
+        <tag>JavaScript</tag>
+        <tag>H5实训</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SpringBoot配置文件及自动配置原理</title>
     <url>/2020/02/12/SpringBoot%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%8A%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h1 id="SpringBoot：配置文件及自动配置原理"><a href="#SpringBoot：配置文件及自动配置原理" class="headerlink" title="SpringBoot：配置文件及自动配置原理"></a>SpringBoot：配置文件及自动配置原理</h1><h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>SpringBoot使用一个全局的配置文件 ， 配置文件名称是固定的</p>
