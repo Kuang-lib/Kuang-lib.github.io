@@ -87,7 +87,7 @@
 
 
 
-  <meta name="keywords" content="Hexo个人博客,NexT美化优化,Leaf,Github Pages,博客相册" />
+  <meta name="keywords" content="JavaScript,学习笔记,H5实训(软件过程管理)," />
 
 
 
@@ -102,13 +102,18 @@
 
 
 
-<meta name="description" content="本站用于记录个人所得">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Simon&#39;s Blog">
-<meta property="og:url" content="http://kuangyuanbin.cn/index.html">
+<meta name="description" content="什么是 Canvas？HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。 画布是一个矩形区域，您可以控制其每一像素。 canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。 创建 Canvas 元素向 HTML5 页面添加 canvas 元素。 规定元素的 id、宽度和高度： 1&lt;canvas id&#x3D;&quot;myCanvas&quot; width&#x3D;&quot;200&quot; h">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Canvas学习">
+<meta property="og:url" content="http://kuangyuanbin.cn/2020/02/21/Canvas%E5%AD%A6%E4%B9%A0/index.html">
 <meta property="og:site_name" content="Simon&#39;s Blog">
-<meta property="og:description" content="本站用于记录个人所得">
+<meta property="og:description" content="什么是 Canvas？HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。 画布是一个矩形区域，您可以控制其每一像素。 canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。 创建 Canvas 元素向 HTML5 页面添加 canvas 元素。 规定元素的 id、宽度和高度： 1&lt;canvas id&#x3D;&quot;myCanvas&quot; width&#x3D;&quot;200&quot; h">
+<meta property="article:published_time" content="2020-02-21T09:20:56.000Z">
+<meta property="article:modified_time" content="2020-02-21T09:51:38.815Z">
 <meta property="article:author" content="Simon">
+<meta property="article:tag" content="JavaScript">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="H5实训(软件过程管理)">
 <meta name="twitter:card" content="summary">
 
 
@@ -139,7 +144,7 @@
 
 
 
-  <link rel="canonical" href="http://kuangyuanbin.cn/"/>
+  <link rel="canonical" href="http://kuangyuanbin.cn/2020/02/21/Canvas学习/"/>
 
 
 
@@ -157,7 +162,7 @@
     })();
 </script>
 
-  <title>Simon's Blog - Ordinary life , Unwilling to be ordinary code farmers</title>
+  <title>Canvas学习 | Simon's Blog</title>
 
   
       <!-- 球型气泡标签云 -->
@@ -188,8 +193,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <!--fork me from github-->
@@ -320,13 +324,8 @@
           <div id="content" class="content">
             
 
-  <!--轮播图-->
-  
-
-
-  <section id="posts" class="posts-expand">
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -356,9 +355,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/21/Canvas%E5%AD%A6%E4%B9%A0/" itemprop="url">Canvas学习</a></h2>
+          <h2 class="post-title" itemprop="name headline">Canvas学习</h2>
         
 
         <div class="post-meta">
@@ -465,26 +462,69 @@
       
 
       
+        <h2 id="什么是-Canvas？"><a href="#什么是-Canvas？" class="headerlink" title="什么是 Canvas？"></a>什么是 Canvas？</h2><p>HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。</p>
+<p>画布是一个矩形区域，您可以控制其每一像素。</p>
+<p>canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。</p>
+<h2 id="创建-Canvas-元素"><a href="#创建-Canvas-元素" class="headerlink" title="创建 Canvas 元素"></a>创建 Canvas 元素</h2><p>向 HTML5 页面添加 canvas 元素。</p>
+<p>规定元素的 id、宽度和高度：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"myCanvas"</span> <span class="attr">width</span>=<span class="string">"200"</span> <span class="attr">height</span>=<span class="string">"100"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h2 id="通过-JavaScript-来绘制"><a href="#通过-JavaScript-来绘制" class="headerlink" title="通过 JavaScript 来绘制"></a>通过 JavaScript 来绘制</h2><p>canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：</p>
+<div class="highlight-wrap"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">			<span class="comment">//获取画布</span></span><br><span class="line">			<span class="keyword">var</span> myCanvas = <span class="built_in">document</span>.getElementById(<span class="string">"myCanvas"</span>);</span><br><span class="line">			<span class="comment">//获取画笔  一个画布对应一个画笔</span></span><br><span class="line">			<span class="keyword">var</span> myContext = myCanvas.getContext(<span class="string">"2d"</span>);</span><br><span class="line">			</span><br><span class="line">			<span class="comment">//画图</span></span><br><span class="line">			<span class="comment">//开启一条路径</span></span><br><span class="line">			myContext.beginPath();</span><br><span class="line">			<span class="comment">//矩形 x,y画图的起点坐标 w,h画的大小</span></span><br><span class="line">			myContext.rect(<span class="number">10</span>,<span class="number">10</span>,<span class="number">50</span>,<span class="number">20</span>);</span><br><span class="line"><span class="comment">//			//画线 默认为黑色</span></span><br><span class="line"><span class="comment">//			myContext.strokeStyle = "aqua";</span></span><br><span class="line"><span class="comment">//			myContext.stroke();</span></span><br><span class="line"><span class="comment">//			填充样式</span></span><br><span class="line">			myContext.fillStyle = <span class="string">"aquamarine"</span>;</span><br><span class="line">			<span class="comment">//填充</span></span><br><span class="line">			myContext.fill();</span><br><span class="line">			<span class="comment">//关闭这条路径</span></span><br><span class="line">			myContext.closePath();</span><br><span class="line">			</span><br><span class="line">			myContext.beginPath();</span><br><span class="line"><span class="comment">//			myContext.fillStyle = "red";</span></span><br><span class="line"><span class="comment">//			myContext.fillRect(10,70,50,50);</span></span><br><span class="line">			myContext.strokeStyle = <span class="string">"red"</span>;</span><br><span class="line">			myContext.strokeRect(<span class="number">10</span>,<span class="number">70</span>,<span class="number">50</span>,<span class="number">50</span>);</span><br><span class="line">			myContext.closePath();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">//画圆</span></span><br><span class="line">			myContext.beginPath();</span><br><span class="line">			<span class="comment">//x，y圆心点坐标 r半径 startAngle起始弧度 endAngle截止弧度 boolean画的方向</span></span><br><span class="line">			<span class="comment">//Math.PI = 180度</span></span><br><span class="line">			<span class="comment">//0度点 中心点右侧 半径的距离</span></span><br><span class="line">			<span class="comment">//true 逆时针</span></span><br><span class="line">			myContext.arc(<span class="number">250</span>,<span class="number">250</span>,<span class="number">50</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">0.5</span>,<span class="literal">true</span>);</span><br><span class="line">			myContext.fill();</span><br><span class="line">			myContext.closePath();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">//画线</span></span><br><span class="line">			myContext.beginPath();</span><br><span class="line">			<span class="comment">//线的起点</span></span><br><span class="line">			myContext.moveTo(<span class="number">10</span>,<span class="number">250</span>);</span><br><span class="line">			<span class="comment">//截止点</span></span><br><span class="line">			myContext.lineTo(<span class="number">10</span>,<span class="number">450</span>);</span><br><span class="line">			myContext.lineTo(<span class="number">200</span>,<span class="number">450</span>);</span><br><span class="line">			myContext.stroke();</span><br><span class="line">			myContext.closePath();</span><br><span class="line">			</span><br><span class="line">			<span class="comment">//渐变</span></span><br><span class="line">			<span class="keyword">var</span> grd=myContext.createLinearGradient(<span class="number">0</span>,<span class="number">0</span>,<span class="number">175</span>,<span class="number">50</span>);</span><br><span class="line">            grd.addColorStop(<span class="number">0</span>,<span class="string">"#FF0000"</span>);</span><br><span class="line">            grd.addColorStop(<span class="number">1</span>,<span class="string">"#00FF00"</span>);</span><br><span class="line">            myContextmyContext.fillStyle=grd;</span><br><span class="line">            myContext.fillRect(<span class="number">0</span>,<span class="number">0</span>,<span class="number">175</span>,<span class="number">50</span>);</span><br><span class="line"></span><br><span class="line">			<span class="comment">//图片</span></span><br><span class="line">            <span class="keyword">var</span> img=<span class="keyword">new</span> Image()</span><br><span class="line">            img.src=<span class="string">"flower.png"</span></span><br><span class="line">            myContext.drawImage(img,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">			<span class="comment">//橡皮擦 (清除画布选中区域)</span></span><br><span class="line"><span class="comment">//			myContext.clearRect(0,0,500,250);</span></span><br></pre></td></tr></table></figure></div>
+
+
+
         
-          
-          什么是 Canvas？HTML5 的 canvas 元素使用 JavaScript 在网页上绘制图像。
-画布是一个矩形区域，您可以控制其每一像素。
-canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。
-创建 Canvas 元素向 HTML5 页面添加 canvas 元素。
-规定元素的
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/21/Canvas%E5%AD%A6%E4%B9%A0/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+
       
     </div>
 
       <!-- 相关文章推荐 -->
+     
+          
+
+  <div class="popular-posts-header">
+    <i class="fa fa-graduation-cap"></i>
+    相关文章
+  </div>
+
+ <details>
+   <summary>点击查看</summary>
+     <ul class="popular-posts">
+     
+       <li class="popular-posts-item">
+         
+         
+         <div class="popular-posts-title"><a href="\2020\02\21\JavaScript进阶\" rel="bookmark">JavaScript进阶</a></div>
+         
+       </li>
+     
+       <li class="popular-posts-item">
+         
+         
+         <div class="popular-posts-title"><a href="\2020\02\17\JavaScript基础\" rel="bookmark">JavaScript基础</a></div>
+         
+       </li>
+     
+       <li class="popular-posts-item">
+         
+         
+         <div class="popular-posts-title"><a href="\2020\02\12\SpringBoot配置文件及自动配置原理\" rel="bookmark">SpringBoot配置文件及自动配置原理</a></div>
+         
+       </li>
+     
+       <li class="popular-posts-item">
+         
+         
+         <div class="popular-posts-title"><a href="\2020\02\06\SpringBoot初探\" rel="bookmark">SpringBoot初探</a></div>
+         
+       </li>
+     
+     </ul>
+ </details>
+
+
+
      
 
     
@@ -493,442 +533,93 @@ canvas 拥有多种绘制路径、矩形、圆形、字符以及添加图像的�
 
     <div>
           
+            
+
+          
     </div>
 
     
 
     <div>
       
+        <div>
+    
+        <div class="read-over">-------------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读-------------------</div>
+    
+</div>
+
+      
     </div>
 
+    
+      <div>
+        <div class="share_reward">
+  <div>坚持原创技术分享，感谢您的支持和鼓励！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="Simon 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Simon 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kuangyuanbin.cn/2020/02/21/JavaScript%E8%BF%9B%E9%98%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Simon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Simon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/21/JavaScript%E8%BF%9B%E9%98%B6/" itemprop="url">JavaScript进阶</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-21T11:36:48+08:00">
-                2020-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/H5/" itemprop="url" rel="index">
-                    <span itemprop="name">H5</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/H5/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/JavaScript/" rel="tag"> <i class="fa fa-tag"></i> JavaScript</a>
           
-
+            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"> <i class="fa fa-tag"></i> 学习笔记</a>
           
-            
+            <a href="/tags/H5%E5%AE%9E%E8%AE%AD-%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E7%AE%A1%E7%90%86/" rel="tag"> <i class="fa fa-tag"></i> H5实训(软件过程管理)</a>
           
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  1.5k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-          DOM
-DOM是Document Object Model（文档对象模型）的缩写
-BOM的一种   BOM：浏览器对象 操作浏览器
-DOM文档对象（标签 标签属性 标签函数等）操作网页
-html 标签 标记
-css  元素
-js   节点
-
-
-
-(一)获取节点1.js中也有对应的选择器querySe
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/21/JavaScript%E8%BF%9B%E9%98%B6/" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/21/JavaScript%E8%BF%9B%E9%98%B6/" rel="next" title="JavaScript进阶">
+                <i class="fa fa-chevron-left"></i> JavaScript进阶
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-      <!-- 相关文章推荐 -->
-     
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kuangyuanbin.cn/2020/02/17/JavaScript%E5%9F%BA%E7%A1%80/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Simon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Simon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/17/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url">JavaScript基础</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-17T19:16:43+08:00">
-                2020-02-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/H5/" itemprop="url" rel="index">
-                    <span itemprop="name">H5</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/H5/JavaScript/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  2.5k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          标签种类标签可分为两种：
-
-单标签：由一个标签组成。例如 &lt;hr /&gt;
-双标签：由“开始标签”和“结束标签”两部分构成。例如&lt;p&gt;&lt;/p&gt;
-
-标签分为两种等级：
-
-　行内元素
-　块级元素
-
-行内元素和块级元素的区别：
-行内元素：　　
-
-与其他行内元素并排
-不能设置
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/17/JavaScript%E5%9F%BA%E7%A1%80/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -938,764 +629,27 @@ js   节点
   </article>
 
 
-    
+
+    <div class="post-spread">
       
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kuangyuanbin.cn/2020/02/12/SpringBoot%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%8A%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Simon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Simon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/12/SpringBoot%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%8A%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/" itemprop="url">SpringBoot配置文件及自动配置原理</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-12T14:55:05+08:00">
-                2020-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  3.5k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          SpringBoot：配置文件及自动配置原理配置文件SpringBoot使用一个全局的配置文件 ， 配置文件名称是固定的
-
-application.properties
-语法结构 ： key=value
-
-
-application.yml
-语法结构 ：key：空格 value
+         <div
+  data-weibo-title="分享到微博"
+  data-qq-title="分享到QQ"
+  data-douban-title="分享到豆瓣"
+  class="social-share"
+  class="share-component"
 
 
 
-配置文件的作用 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/12/SpringBoot%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8F%8A%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+  data-disabled="qzone,google+,linkedin"
+  data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣...">
+   分享到：
+</div>
+
+
       
     </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kuangyuanbin.cn/2020/02/06/SpringBoot%E5%88%9D%E6%8E%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Simon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Simon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/02/06/SpringBoot%E5%88%9D%E6%8E%A2/" itemprop="url">SpringBoot初探</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-02-06T17:10:00+08:00">
-                2020-02-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SpringBoot/" itemprop="url" rel="index">
-                    <span itemprop="name">SpringBoot</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  2.7k
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          什么是SpringBoot学过javaweb的同学就知道，开发一个web应用，从最初开始接触Servlet结合Tomcat, 跑出一个Hello Wolrld程序，是要经历特别多的步骤； 后来就用了框架Struts，再后来是SpringMVC，到了现在的SpringBoot，过一两年又会有其他web
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/02/06/SpringBoot%E5%88%9D%E6%8E%A2/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kuangyuanbin.cn/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Simon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Simon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" itemprop="url">hexo插入图片</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-17T20:03:08+08:00">
-                2020-01-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  334
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在写文章时，常常有配图说明的需求，Hexo有多种图片插入方式，可以将图片存放在本地引用或者将图片放在CDN上引用，通过此文总接一下在Hexo搭建的博客中，插入图片的常用方式，也可以理解为在 Markdown 中插入图片。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/01/17/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://kuangyuanbin.cn/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Simon">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Simon's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/" itemprop="url">hexo中的nexT主题菜单栏选项跳转时出现Cannot GET</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-             
-
-             
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-16T20:24:08+08:00">
-                2020-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/nexT/" itemprop="url" rel="index">
-                    <span itemprop="name">nexT</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          <!--
-          
-          -->
-
-          
-            <span class="post-wordcount">
-              
-                
-                  <span class="post-meta-divider">|</span>
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数">
-                  284
-                </span>
-              
-
-              
-
-              
-            </span>
-          
-
-          <!-- 隐藏文章内标题下，内容描述
-          
-          -->
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="hexo中的nexT主题菜单栏选项跳转时出现Cannot-GET-tags-20"><a href="#hexo中的nexT主题菜单栏选项跳转时出现Cannot-GET-tags-20" class="headerlink" title="hexo中的nexT主题菜单栏选项跳转时出现Cannot GET /tags/%20/"></a>hexo中的nexT主题菜单栏选项跳转时出现Cannot GET /tags/%20/</h2><p>刚接触hexo博客nexT主题，默认只有首页和归档两个菜单项，为了让菜单栏显得不那么空旷，按照<strong><em><a href="https://blog.csdn.net/mqdxiaoxiao/article/details/93644533" target="_blank" rel="noopener">教程添加分类、标签、关于菜单项</a></em></strong><br>完全按照教程做完之后，点击首页、关于、标签等菜单项，无法跳转到自己想看的界面，会出现如下图显示的界面。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/01/16/hexo%E8%B8%A9%E5%9D%91%E4%B9%8B%E6%97%85/" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-      <!-- 相关文章推荐 -->
-     
-
-    
-    
-    
-
-    <div>
-          
-    </div>
-
-    
-
-    <div>
-      
-    </div>
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1703,6 +657,13 @@ application.yml
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
 
 
@@ -1727,8 +688,17 @@ application.yml
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2187,6 +1157,22 @@ show_date_time();
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-Canvas？"><span class="nav-number">1.</span> <span class="nav-text">什么是 Canvas？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建-Canvas-元素"><span class="nav-number">2.</span> <span class="nav-text">创建 Canvas 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过-JavaScript-来绘制"><span class="nav-number">3.</span> <span class="nav-text">通过 JavaScript 来绘制</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -2387,6 +1373,10 @@ show_date_time();
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
